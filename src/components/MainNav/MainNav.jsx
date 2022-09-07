@@ -32,5 +32,4 @@ export const MainNav = () => {
     </List>
   );
 };
-
 export default MainNav;

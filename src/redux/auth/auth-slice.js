@@ -27,7 +27,9 @@ const authSlice = createSlice({
       state.user = { name: null, email: null };
       state.token = null;
       state.isLoggedIn = false;
-      showError('Oops, something went wrong. Please try again');
+      showError(
+        'Oops, you may already be registered. Try the link below or click on LogIn in the header.'
+      );
     },
     [authOperations.logIn.fulfilled](state, action) {
       state.user = action.payload.user;

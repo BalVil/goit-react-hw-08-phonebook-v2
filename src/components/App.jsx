@@ -8,6 +8,7 @@ import SharedLayout from 'components/SharedLayout';
 import { authOperations } from 'redux/auth';
 import PrivateRoute from './PrivateRoute/PrivateRoute';
 import PublicRoute from './PublicRoute/PublicRoute';
+import { AuthContextProvider } from 'context/AuthContextGoogle';
 
 const Home = lazy(() => import('pages/Home'));
 const ContactsPage = lazy(() => import('pages/ContactsPage'));
@@ -22,7 +23,7 @@ export const App = () => {
   }, [dispatch]);
 
   return (
-    <>
+    <AuthContextProvider>
       <Routes>
         <Route path="/" element={<SharedLayout />}>
           <Route
@@ -52,7 +53,7 @@ export const App = () => {
           <Route
             path="login"
             element={
-              <PublicRoute restricted redirectPath="/contacts">
+              <PublicRoute restricted>
                 <LoginPage />
               </PublicRoute>
             }
@@ -62,6 +63,6 @@ export const App = () => {
       </Routes>
 
       <ToastContainer autoClose={3000} transition={Slide} />
-    </>
+    </AuthContextProvider>
   );
 };

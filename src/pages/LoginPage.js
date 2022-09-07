@@ -1,7 +1,4 @@
-import { useDispatch } from 'react-redux';
 import { Link as RouterLink } from 'react-router-dom';
-import { useForm } from 'react-hook-form';
-
 import Button from '@mui/material/Button';
 import CssBaseline from '@mui/material/CssBaseline';
 import TextField from '@mui/material/TextField';
@@ -10,39 +7,18 @@ import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
-
-import { authOperations } from '../redux/auth';
+import { GoogleButton } from 'react-google-button';
+import { useLogIn } from 'hooks/useLogIn';
 
 const LoginPage = () => {
-  const dispatch = useDispatch();
   const {
     register,
     handleSubmit,
-    formState: { errors },
-  } = useForm();
-
-  const logInValidation = {
-    name: { required: 'Name is required' },
-    email: {
-      required: 'Email is required',
-      pattern: {
-        value:
-          //eslint-disable-next-line
-          /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
-        message: 'Invalid email format',
-      },
-    },
-    password: {
-      required: 'Password is required',
-      minLength: {
-        value: 8,
-        message: 'Password must have at least 8 characters',
-      },
-    },
-  };
-
-  const handleLogin = ({ email, password }) =>
-    dispatch(authOperations.logIn({ email, password }));
+    handleLogin,
+    handleGoogleSignIn,
+    logInValidation,
+    errors,
+  } = useLogIn();
 
   return (
     <Container
@@ -127,7 +103,18 @@ const LoginPage = () => {
               Log in
             </Button>
 
-            <Grid container justifyContent="flex-end">
+            <Grid
+              container
+              justifyContent="center"
+              sx={{
+                mt: 3,
+                mb: 1,
+              }}
+            >
+              <GoogleButton onClick={handleGoogleSignIn} />
+            </Grid>
+
+            <Grid container justifyContent="center">
               <Grid item>
                 <Link component={RouterLink} to="/register" variant="body2">
                   Don't have an account? Sign Up
