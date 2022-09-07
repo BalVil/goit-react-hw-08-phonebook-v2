@@ -10,22 +10,28 @@ export default function AuthNav() {
         sx={{
           color: '#f1f3f5',
           '&:hover, &:focus': { bgcolor: 'rgba(62,97,160,0.2)' },
+          fontSize: '16px',
           marginRight: 3,
         }}
         variant="text"
         endIcon={<AssignmentIndOutlinedIcon />}
+        component={Link}
+        to="/register"
       >
-        <Link to="/register">Sign up</Link>
+        Sign up
       </Button>
       <Button
         sx={{
           color: '#f1f3f5',
           '&:hover, &:focus': { bgcolor: 'rgba(62,97,160,0.2)' },
+          fontSize: '16px',
         }}
         variant="text"
         endIcon={<LoginOutlinedIcon />}
+        component={Link}
+        to="/login"
       >
-        <Link to="/login">Log In</Link>
+        Log In
       </Button>
     </List>
   );
