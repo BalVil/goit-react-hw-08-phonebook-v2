@@ -28,7 +28,7 @@ export default function UserMenu() {
 
   return (
     <Wrap>
-      <Avatar src={user?.photoURL || avatar} alt="avatar" width="32" />
+      <Avatar src={avatar || user?.photoURL} alt="avatar" width="32" />
 
       {(name || user?.displayName) && (
         <Typography

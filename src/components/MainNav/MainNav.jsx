@@ -12,21 +12,27 @@ export const MainNav = () => {
         sx={{
           color: '#f1f3f5',
           '&:hover, &:focus': { bgcolor: 'rgba(62,97,160,0.2)' },
+          fontSize: '16px',
           marginRight: 3,
         }}
         variant="text"
+        component={Link}
+        to="/"
       >
-        <Link to="/">Home</Link>
+        Home
       </Button>
       {isLoggedIn && (
         <Button
           sx={{
             color: '#f1f3f5',
             '&:hover, &:focus': { bgcolor: 'rgba(62,97,160,0.2)' },
+            fontSize: '16px',
           }}
           variant="text"
+          component={Link}
+          to="contacts"
         >
-          <Link to="contacts">Contacts</Link>
+          Contacts
         </Button>
       )}
     </List>
