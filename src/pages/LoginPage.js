@@ -103,7 +103,7 @@ const LoginPage = () => {
               Log in
             </Button>
 
-            <Grid
+            {/* <Grid
               container
               justifyContent="center"
               sx={{
@@ -112,7 +112,7 @@ const LoginPage = () => {
               }}
             >
               <GoogleButton onClick={handleGoogleSignIn} />
-            </Grid>
+            </Grid> */}
 
             <Grid container justifyContent="center">
               <Grid item>

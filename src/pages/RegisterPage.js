@@ -121,7 +121,7 @@ const RegisterPage = () => {
               Sign up
             </Button>
 
-            <Grid
+            {/* <Grid
               container
               justifyContent="center"
               sx={{
@@ -130,7 +130,7 @@ const RegisterPage = () => {
               }}
             >
               <GoogleButton onClick={handleGoogleSignIn} />
-            </Grid>
+            </Grid> */}
 
             <Grid container justifyContent="flex-end">
               <Grid item>
