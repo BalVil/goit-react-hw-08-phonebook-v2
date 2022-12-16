@@ -1,4 +1,4 @@
-import homePageImage from './contacts.jpg';
+import homePageImage from 'images/contacts.jpg';
 const styles = {
   container: {
     minHeight: 'calc(100vh - 50px)',
