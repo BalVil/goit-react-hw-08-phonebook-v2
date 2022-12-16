@@ -138,7 +138,7 @@ const RegisterPage = () => {
             <Grid container justifyContent="flex-end">
               <Grid item>
                 <Link component={RouterLink} to="/login" variant="body2">
-                  Already have an account? Log In
+                  Are you already registered with us? Login
                 </Link>
               </Grid>
             </Grid>
