@@ -32,7 +32,6 @@ const RegisterPage = () => {
       <Box
         sx={{
           padding: 4,
-          bgcolor: '#fff',
           borderRadius: 2,
 
           '&:hover': { boxShadow: 'rgb(0 0 0 / 20%) 0px 2px 4px;' },
@@ -113,7 +112,7 @@ const RegisterPage = () => {
               fullWidth
               sx={{
                 mt: 3,
-                mb: 2,
+                mb: 4,
                 bgcolor: '#32a5cf',
                 '&:hover, &:focus': { bgcolor: '#3e61a0' },
               }}
@@ -125,8 +124,7 @@ const RegisterPage = () => {
               container
               justifyContent="center"
               sx={{
-                mt: 3,
-                mb: 1,
+                mb: 2,
               }}
             >
               <GoogleButton
@@ -135,11 +133,21 @@ const RegisterPage = () => {
               />
             </Grid>
 
-            <Grid container justifyContent="flex-end">
+            <Grid container justifyContent="center">
               <Grid item>
-                <Link component={RouterLink} to="/login" variant="body2">
-                  Are you already registered with us? Login
-                </Link>
+                <Typography
+                  variant="body1"
+                  sx={{ color: 'rgba(0, 0, 0, 0.6)' }}
+                >
+                  Are you already registered with us?&nbsp;
+                  <Link
+                    component={RouterLink}
+                    to="/login"
+                    sx={{ '&:hover': { letterSpacing: 2 } }}
+                  >
+                    LogIn
+                  </Link>
+                </Typography>
               </Grid>
             </Grid>
           </Box>

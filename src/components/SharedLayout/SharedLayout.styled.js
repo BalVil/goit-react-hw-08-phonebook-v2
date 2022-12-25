@@ -3,9 +3,8 @@ import styled from '@emotion/styled';
 export const Header = styled.header`
   width: 100%;
   min-height: 68px;
-  padding-left: 24px;
-  padding-right: 24px;
-  margin-bottom: 16px;
+  padding-left: 12px;
+  padding-right: 12px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -17,4 +16,9 @@ export const Header = styled.header`
     rgb(0 0 0 / 14%) 0px 4px 5px 0px, rgb(0 0 0 / 12%) 0px 1px 10px 0px;
 
   transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+
+  @media screen and (min-width: 720px) {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
 `;

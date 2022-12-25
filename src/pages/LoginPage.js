@@ -31,7 +31,6 @@ const LoginPage = () => {
       <Box
         sx={{
           padding: 4,
-          bgcolor: '#fff',
           borderRadius: 2,
           '&:hover': { boxShadow: 'rgb(0 0 0 / 20%) 0px 2px 4px;' },
         }}
@@ -95,7 +94,7 @@ const LoginPage = () => {
               fullWidth
               sx={{
                 mt: 3,
-                mb: 2,
+                mb: 4,
                 bgcolor: '#32a5cf',
                 '&:hover, &:focus': { bgcolor: '#3e61a0' },
               }}
@@ -107,18 +106,30 @@ const LoginPage = () => {
               container
               justifyContent="center"
               sx={{
-                mt: 3,
-                mb: 1,
+                mb: 2,
               }}
             >
-              <GoogleButton onClick={handleGoogleSignIn} />
+              <GoogleButton
+                label="Log in with Google"
+                onClick={handleGoogleSignIn}
+              />
             </Grid>
 
             <Grid container justifyContent="center">
               <Grid item>
-                <Link component={RouterLink} to="/register" variant="body2">
-                  Don't have an account? Sign Up
-                </Link>
+                <Typography
+                  variant="body1"
+                  sx={{ color: 'rgba(0, 0, 0, 0.6)' }}
+                >
+                  Don't have an account?&nbsp;
+                  <Link
+                    component={RouterLink}
+                    to="/register"
+                    sx={{ '&:hover': { letterSpacing: 2 } }}
+                  >
+                    SignUp
+                  </Link>
+                </Typography>
               </Grid>
             </Grid>
           </Box>
