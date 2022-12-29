@@ -1,15 +1,28 @@
 import styled from '@emotion/styled';
 import { Button } from '@mui/material';
 
-export const FormWrap = styled.div`
-  width: 380px;
-  padding: 16px;
-  margin: 0 auto;
+export const FormSection = styled.section`
+  margin-top: 48px;
+  text-align: center;
+
+  @media screen and (min-width: 720px) {
+    margin-top: 80px;
+  }
 `;
 
 export const Title = styled.h1`
-  margin-bottom: 16px;
-  font-size: 28px;
+  margin-bottom: 24px;
+  font-size: 36px;
+`;
+
+export const FormWrap = styled.div`
+  max-width: 380px;
+  margin: 0 auto;
+  padding: 0 12px;
+
+  @media screen and (min-width: 450px) {
+    max-width: 420px;
+  }
 `;
 
 export const Form = styled.form`

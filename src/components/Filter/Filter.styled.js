@@ -17,7 +17,7 @@ export const LabelTitle = styled.p`
 export const FilterInput = styled(DebounceInput)`
   display: block;
   height: calc(2.5rem + 2px);
-  width: 50%;
+  width: 70%;
   margin-bottom: 8px;
   padding: 1rem 0.75rem;
   font-size: 1.1rem;
