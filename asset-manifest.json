@@ -1,9 +1,9 @@
 {
   "files": {
     "main.css": "/goit-react-hw-08-phonebook-v2/static/css/main.f5955e83.css",
-    "main.js": "/goit-react-hw-08-phonebook-v2/static/js/main.e82020c2.js",
+    "main.js": "/goit-react-hw-08-phonebook-v2/static/js/main.c62a5e71.js",
     "static/js/130.9adbb082.chunk.js": "/goit-react-hw-08-phonebook-v2/static/js/130.9adbb082.chunk.js",
-    "static/js/65.000a8c95.chunk.js": "/goit-react-hw-08-phonebook-v2/static/js/65.000a8c95.chunk.js",
+    "static/js/278.77bdba34.chunk.js": "/goit-react-hw-08-phonebook-v2/static/js/278.77bdba34.chunk.js",
     "static/js/118.f7b57f30.chunk.js": "/goit-react-hw-08-phonebook-v2/static/js/118.f7b57f30.chunk.js",
     "static/js/919.c8bed9ee.chunk.js": "/goit-react-hw-08-phonebook-v2/static/js/919.c8bed9ee.chunk.js",
     "static/js/781.d1de7e7c.chunk.js": "/goit-react-hw-08-phonebook-v2/static/js/781.d1de7e7c.chunk.js",
@@ -13,9 +13,9 @@
     "static/media/avatar-default.png": "/goit-react-hw-08-phonebook-v2/static/media/avatar-default.e00499262e4a9169ca28.png",
     "index.html": "/goit-react-hw-08-phonebook-v2/index.html",
     "main.f5955e83.css.map": "/goit-react-hw-08-phonebook-v2/static/css/main.f5955e83.css.map",
-    "main.e82020c2.js.map": "/goit-react-hw-08-phonebook-v2/static/js/main.e82020c2.js.map",
+    "main.c62a5e71.js.map": "/goit-react-hw-08-phonebook-v2/static/js/main.c62a5e71.js.map",
     "130.9adbb082.chunk.js.map": "/goit-react-hw-08-phonebook-v2/static/js/130.9adbb082.chunk.js.map",
-    "65.000a8c95.chunk.js.map": "/goit-react-hw-08-phonebook-v2/static/js/65.000a8c95.chunk.js.map",
+    "278.77bdba34.chunk.js.map": "/goit-react-hw-08-phonebook-v2/static/js/278.77bdba34.chunk.js.map",
     "118.f7b57f30.chunk.js.map": "/goit-react-hw-08-phonebook-v2/static/js/118.f7b57f30.chunk.js.map",
     "919.c8bed9ee.chunk.js.map": "/goit-react-hw-08-phonebook-v2/static/js/919.c8bed9ee.chunk.js.map",
     "781.d1de7e7c.chunk.js.map": "/goit-react-hw-08-phonebook-v2/static/js/781.d1de7e7c.chunk.js.map",
@@ -24,6 +24,6 @@
   },
   "entrypoints": [
     "static/css/main.f5955e83.css",
-    "static/js/main.e82020c2.js"
+    "static/js/main.c62a5e71.js"
   ]
 }
