@@ -2,13 +2,13 @@ import { initializeApp } from 'firebase/app';
 import { getAuth } from 'firebase/auth';
 
 const firebaseConfig = {
-  apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
-  authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN,
-  projectId: process.env.REACT_APP_FIREBASE_PROJECT_ID,
-  storageBucket: process.env.REACT_APP_FIREBASE_STORAGE_BUCKET,
-  messagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGING_SENDER_ID,
-  appId: process.env.REACT_APP_FIREBASE_APP_ID,
-  measurementId: process.env.REACT_APP_FIREBASE_MEASUREMENT_ID,
+  apiKey: 'AIzaSyCaKT8X3oBo_fkHrtIlu92yA2OgbhyRAb0',
+  authDomain: 'balvil-phonebook.firebaseapp.com',
+  projectId: 'balvil-phonebook',
+  storageBucket: 'balvil-phonebook.appspot.com',
+  messagingSenderId: '335989863400',
+  appId: '1:335989863400:web:286e9b6a04f5b16b25ea5d',
+  measurementId: 'G-WHR4J9B4VV',
 };
 
 // Initialize Firebase
