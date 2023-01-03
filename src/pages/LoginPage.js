@@ -121,7 +121,8 @@ const LoginPage = () => {
                   variant="body1"
                   sx={{ color: 'rgba(0, 0, 0, 0.6)' }}
                 >
-                  Don't have an account?&nbsp;
+                  If you do not have an account or want to sign in with a Google
+                  account for the first time &nbsp;
                   <Link
                     component={RouterLink}
                     to="/register"
