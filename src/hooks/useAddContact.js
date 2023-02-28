@@ -18,33 +18,6 @@ export const useAddContact = () => {
     control,
   } = useForm({ defaultValues: { name: '', number: '' } });
 
-  const contactValidation = {
-    name: {
-      required: 'Name is required',
-      maxLength: 50,
-      pattern: {
-        value:
-          /^[a-zA-Zа-яА-Я0-9]+(([' -][a-zA-Zа-яА-Я0-9 ])?[a-zA-Zа-яА-Я0-9]*)*$/,
-        message: 'Invalid name format',
-      },
-    },
-    number: {
-      required: 'Number is required',
-      pattern: {
-        value: /^[0-9]+$/,
-        message: 'This is not a valid mobile phone',
-      },
-      minLength: {
-        value: 6,
-        message: 'This number is too short',
-      },
-      maxLength: {
-        value: 14,
-        message: 'This number is too long',
-      },
-    },
-  };
-
   const handleAddContact = data => {
     const sameName =
       items.findIndex(
@@ -74,6 +47,6 @@ export const useAddContact = () => {
     isLoading,
     handleSubmit,
     handleAddContact,
-    contactValidation,
+    // contactValidation,
   };
 };

@@ -4,10 +4,11 @@ import CssBaseline from '@mui/material/CssBaseline';
 import TextField from '@mui/material/TextField';
 import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
-import { FormSection, Title, FormWrap } from './ContactForm.styled';
 
+import { contactValidation } from 'helpers/contactValidation';
 import Spinner from 'components/Spinner';
 import { useAddContact } from 'hooks/useAddContact';
+import { FormSection, Title, FormWrap } from './ContactForm.styled';
 
 const ContactForm = () => {
   const {
@@ -17,7 +18,6 @@ const ContactForm = () => {
     isLoading,
     handleSubmit,
     handleAddContact,
-    contactValidation,
   } = useAddContact();
 
   return (

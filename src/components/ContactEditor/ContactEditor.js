@@ -47,6 +47,10 @@ const ContactEditor = ({ id, onClose }) => {
               onChange={handleChange}
               value={inputs.name}
               variant="standard"
+              inputProps={{
+                pattern:
+                  "[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я0-9 ])?[a-zA-Zа-яА-Я0-9]*)*",
+              }}
             />
           </Grid>
 
@@ -61,7 +65,10 @@ const ContactEditor = ({ id, onClose }) => {
               onChange={handleChange}
               value={inputs.number}
               variant="standard"
-              onKeyPress={e => !/[0-9]/.test(e.key) && e.preventDefault()}
+              inputProps={{
+                pattern:
+                  '(\\+\\d)?(\\d{3,4}|\\(\\d{3,4}\\))[-\\s]?\\d{3}[-\\s]?\\d{4}',
+              }}
             />
           </Grid>
         </Grid>

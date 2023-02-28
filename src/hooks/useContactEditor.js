@@ -27,6 +27,15 @@ export const useContactEditor = ({ id, onClose }) => {
   const handleSubmit = e => {
     e.preventDefault();
 
+    // const reg = new RegExp(
+    //   /^(\+\d\s*)?(\d{3,4}|\(\d{3,4}\))[-\s]?\d{3}[-\s]?\d{4}$/
+    // );
+    // let result = reg.test(inputs.number);
+    // console.log(result);
+    // if (!result) {
+    //   return;
+    // }
+
     // має перевіряти бекенд
     const sameName =
       items.findIndex(
