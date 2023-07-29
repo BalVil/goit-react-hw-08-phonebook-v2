@@ -6,44 +6,29 @@ import Typography from '@mui/material/Typography';
 import { authSelectors, authOperations } from '../../redux/auth';
 import defaultAvatar from './avatar-default.png';
 import { Wrap, Avatar } from './UserMenu.styled';
-import { UserAuthGoogle } from 'context/AuthContextGoogle';
 
 export default function UserMenu() {
   const dispatch = useDispatch();
   const name = useSelector(authSelectors.getUsername);
   const matches = useMediaQuery('(min-width:700px)');
-
   const avatar = defaultAvatar;
-
-  const { logOut, user } = UserAuthGoogle();
-
-  const handleSignOut = async () => {
-    if (name) {
-      dispatch(authOperations.logOut());
-    }
-
-    try {
-      await logOut();
-    } catch (error) {
-      console.log(error);
-    }
-  };
 
   return (
     <Wrap>
       <Avatar
-        src={user?.photoURL || avatar}
+        src={avatar}
         alt="avatar"
         width="32"
+        height="32"
         referrerPolicy="no-referrer"
       />
 
-      {(name || user?.displayName) && (
+      {name && (
         <Typography
           component="span"
           sx={{ marginRight: '16px', color: '#f4ecc2', fontSize: '16px' }}
         >
-          Welcome, {name || user?.displayName}
+          Welcome, {name}
         </Typography>
       )}
 
@@ -55,7 +40,7 @@ export default function UserMenu() {
             fontSize: '16px',
           }}
           type="button"
-          onClick={() => dispatch(handleSignOut)}
+          onClick={() => dispatch(authOperations.logOut())}
           variant="text"
           endIcon={<LogoutIcon />}
         >
@@ -71,7 +56,7 @@ export default function UserMenu() {
             minWidth: '24px',
           }}
           type="button"
-          onClick={() => dispatch(handleSignOut)}
+          onClick={() => dispatch(authOperations.logOut())}
           variant="text"
         >
           Log Out

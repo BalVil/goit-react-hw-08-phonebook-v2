@@ -7,7 +7,6 @@ import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
-import { GoogleButton } from 'react-google-button';
 
 import { useSignUp } from 'hooks/useSignUp';
 
@@ -16,7 +15,6 @@ const RegisterPage = () => {
     register,
     handleSubmit,
     handleRegistration,
-    handleGoogleSignIn,
     registerValidation,
     errors,
   } = useSignUp();
@@ -119,19 +117,6 @@ const RegisterPage = () => {
             >
               Sign up
             </Button>
-
-            <Grid
-              container
-              justifyContent="center"
-              sx={{
-                mb: 2,
-              }}
-            >
-              <GoogleButton
-                label="Sign up with Google"
-                onClick={handleGoogleSignIn}
-              />
-            </Grid>
 
             <Grid container justifyContent="center">
               <Grid item>

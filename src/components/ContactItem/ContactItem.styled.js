@@ -14,7 +14,7 @@ export const Contact = styled.li`
 
 export const ContactName = styled.span`
   flex-basis: 50%;
-  font-weight: 600;
+  font-weight: 500;
   overflow-wrap: break-word;
 `;
 

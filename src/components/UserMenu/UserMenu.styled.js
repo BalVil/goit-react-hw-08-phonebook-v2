@@ -8,4 +8,6 @@ export const Wrap = styled.div`
 export const Avatar = styled.img`
   margin-right: 4px;
   border-radius: 50%;
+  width: 32px;
+  height: 32px;
 `;

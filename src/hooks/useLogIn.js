@@ -2,7 +2,6 @@ import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { useForm } from 'react-hook-form';
 import { authOperations } from '../redux/auth';
-import { UserAuthGoogle } from 'context/AuthContextGoogle';
 
 export const useLogIn = () => {
   const dispatch = useDispatch();
@@ -11,7 +10,6 @@ export const useLogIn = () => {
     handleSubmit,
     formState: { errors },
   } = useForm();
-  const { googleSignIn, user } = UserAuthGoogle();
 
   const logInValidation = {
     name: { required: 'Name is required' },
@@ -36,33 +34,10 @@ export const useLogIn = () => {
   const handleLogin = ({ email, password }) =>
     dispatch(authOperations.logIn({ email, password }));
 
-  const handleGoogleSignIn = async () => {
-    try {
-      await googleSignIn();
-    } catch (error) {
-      console.log(error);
-    }
-  };
-
-  useEffect(() => {
-    if (user?.emailVerified) {
-      async function fetchData() {
-        dispatch(
-          authOperations.logIn({
-            email: user.email,
-            password: user.uid,
-          })
-        );
-      }
-      fetchData();
-    }
-  }, [dispatch, user]);
-
   return {
     register,
     handleSubmit,
     handleLogin,
-    handleGoogleSignIn,
     logInValidation,
     errors,
   };

@@ -3,7 +3,6 @@ import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
 import { authOperations } from 'redux/auth';
-import { UserAuthGoogle } from 'context/AuthContextGoogle';
 
 export const useSignUp = () => {
   const dispatch = useDispatch();
@@ -12,7 +11,6 @@ export const useSignUp = () => {
     handleSubmit,
     formState: { errors },
   } = useForm();
-  const { googleSignIn, user } = UserAuthGoogle();
   const navigate = useNavigate();
 
   const registerValidation = {
@@ -43,34 +41,10 @@ export const useSignUp = () => {
 
   const handleRegistration = data => dispatch(authOperations.register(data));
 
-  const handleGoogleSignIn = async () => {
-    try {
-      await googleSignIn();
-    } catch (error) {
-      console.log(error);
-    }
-  };
-
-  useEffect(() => {
-    if (user?.emailVerified) {
-      async function fetchData() {
-        dispatch(
-          authOperations.register({
-            name: user.displayName,
-            email: user.email,
-            password: user.uid,
-          })
-        );
-      }
-      fetchData();
-    }
-  }, [dispatch, navigate, user]);
-
   return {
     register,
     handleSubmit,
     handleRegistration,
-    handleGoogleSignIn,
     registerValidation,
     errors,
   };

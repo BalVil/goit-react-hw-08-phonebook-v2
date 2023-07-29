@@ -1,3 +1,4 @@
+import React from 'react';
 import { Link as RouterLink } from 'react-router-dom';
 import Button from '@mui/material/Button';
 import CssBaseline from '@mui/material/CssBaseline';
@@ -7,18 +8,11 @@ import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
-import { GoogleButton } from 'react-google-button';
 import { useLogIn } from 'hooks/useLogIn';
 
 const LoginPage = () => {
-  const {
-    register,
-    handleSubmit,
-    handleLogin,
-    handleGoogleSignIn,
-    logInValidation,
-    errors,
-  } = useLogIn();
+  const { register, handleSubmit, handleLogin, logInValidation, errors } =
+    useLogIn();
 
   return (
     <Container
@@ -102,27 +96,13 @@ const LoginPage = () => {
               Log in
             </Button>
 
-            <Grid
-              container
-              justifyContent="center"
-              sx={{
-                mb: 2,
-              }}
-            >
-              <GoogleButton
-                label="Log in with Google"
-                onClick={handleGoogleSignIn}
-              />
-            </Grid>
-
             <Grid container justifyContent="center">
               <Grid item>
                 <Typography
                   variant="body1"
                   sx={{ color: 'rgba(0, 0, 0, 0.6)' }}
                 >
-                  If you do not have an account or want to sign in with a Google
-                  account for the first time &nbsp;
+                  If you do not have an account &nbsp;
                   <Link
                     component={RouterLink}
                     to="/register"
