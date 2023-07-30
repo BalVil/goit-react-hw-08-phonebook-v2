@@ -14,7 +14,7 @@ export const contactValidation = {
       message: 'This is not a valid mobile phone',
     },
     minLength: {
-      value: 10,
+      value: 5,
       message: 'This number is too short',
     },
     maxLength: {

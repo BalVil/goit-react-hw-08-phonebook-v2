@@ -3,7 +3,10 @@ import styled from '@emotion/styled';
 export const Contact = styled.li`
   position: relative;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
+  justify-content: space-around;
+  gap: 8px;
   margin-bottom: 8px;
   padding: 12px 8px;
   line-height: 1.4em;
@@ -13,12 +16,22 @@ export const Contact = styled.li`
 `;
 
 export const ContactName = styled.span`
-  flex-basis: 50%;
+  flex: 1;
   font-weight: 500;
   overflow-wrap: break-word;
+
+  @media screen and (max-width: 420px) {
+    flex: 420px;
+  }
 `;
 
 export const ContactNumber = styled.span`
-  max-width: 35%;
+  flex: 1;
   overflow-wrap: break-word;
+`;
+
+export const Buttons = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 6px;
 `;
